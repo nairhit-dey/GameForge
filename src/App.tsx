@@ -5,6 +5,8 @@ import Navbar from './components/Navbar';
 import Cart from './components/Cart';
 import Home from './pages/Home';
 import Shop from './pages/Shop';
+import ProductDetail from './pages/ProductDetail';
+import Checkout from './pages/Checkout';
 
 function App() {
   const [isCartOpen, setIsCartOpen] = useState(false);
@@ -18,6 +20,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/product/:id" element={<ProductDetail />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
         </div>
       </Router>

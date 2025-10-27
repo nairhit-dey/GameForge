@@ -1,4 +1,5 @@
 import { X, Plus, Minus, ShoppingBag, Trash2 } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import { useCart } from '../context/CartContext';
 
 interface CartProps {
@@ -120,9 +121,13 @@ export default function Cart({ isOpen, onClose }: CartProps) {
                 </div>
               </div>
 
-              <button className="w-full bg-gray-900 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors mb-3">
+              <Link
+                to="/checkout"
+                onClick={onClose}
+                className="block w-full bg-gray-900 text-white py-4 rounded-lg font-semibold hover:bg-gray-800 transition-colors mb-3 text-center"
+              >
                 Proceed to Checkout
-              </button>
+              </Link>
 
               <button
                 onClick={clearCart}
