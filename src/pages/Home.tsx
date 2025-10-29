@@ -47,28 +47,28 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white dark:bg-gray-900">
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center max-w-4xl mx-auto mb-16">
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
               Where Innovation
               <br />
               Meets Gaming
             </h1>
-            <p className="text-xl sm:text-2xl text-gray-600 mb-10 leading-relaxed">
+            <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-300 mb-10 leading-relaxed">
               Premium gaming hardware designed for champions.
               Engineered with precision, built for performance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href="/shop"
-                className="bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-all hover:scale-105 flex items-center justify-center gap-2"
+                className="bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-all hover:scale-105 flex items-center justify-center gap-2"
               >
                 Explore Products
                 <ArrowRight size={20} />
               </a>
-              <button className="border-2 border-gray-900 text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-50 transition-colors">
+              <button className="border-2 border-gray-900 dark:border-white text-gray-900 dark:text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
                 Watch Demo
               </button>
             </div>
@@ -85,20 +85,20 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section id="products" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Featured Products
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Discover our latest collection of professional gaming equipment
             </p>
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
             {featuredProducts.map((product, index) => (
-              <div key={index} className="group bg-white rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
+              <div key={index} className="group bg-white dark:bg-gray-900 rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-300">
                 <div className="relative overflow-hidden aspect-square">
                   <img
                     src={product.image}
@@ -107,15 +107,15 @@ export default function Home() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                  <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
                     {product.name}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-gray-600 dark:text-gray-400 text-sm mb-4">
                     {product.description}
                   </p>
                   <div className="flex items-center justify-between">
-                    <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-                    <button className="text-gray-900 hover:text-gray-600 transition-colors">
+                    <span className="text-2xl font-bold text-gray-900 dark:text-white">{product.price}</span>
+                    <button className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
                       <ArrowRight size={20} />
                     </button>
                   </div>
@@ -127,7 +127,7 @@ export default function Home() {
           <div className="text-center">
             <a
               href="/shop"
-              className="inline-flex items-center gap-2 bg-gray-900 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 transition-colors"
+              className="inline-flex items-center gap-2 bg-gray-900 dark:bg-white text-white dark:text-gray-900 px-8 py-4 rounded-full text-lg font-medium hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
             >
               View All Products
               <ArrowRight size={20} />
@@ -139,10 +139,10 @@ export default function Home() {
       <section id="features" className="py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Why Choose GameForge
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Experience the difference that quality and innovation make
             </p>
           </div>
@@ -150,13 +150,13 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-12 mb-20">
             {features.map((feature, index) => (
               <div key={index} className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-gray-900 text-white rounded-2xl mb-6">
+                <div className="inline-flex items-center justify-center w-14 h-14 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-2xl mb-6">
                   {feature.icon}
                 </div>
-                <h3 className="text-2xl font-semibold text-gray-900 mb-3">
+                <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-3">
                   {feature.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   {feature.description}
                 </p>
               </div>
@@ -165,50 +165,50 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="technology" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+      <section id="technology" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 dark:text-white mb-4">
               Cutting-Edge Technology
             </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+            <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               Powered by innovations that redefine gaming performance
             </p>
           </div>
 
           <div className="grid md:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mb-6">
                 <Cpu size={24} />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Advanced Processing
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Next-generation processors deliver uncompromising performance for the most demanding games
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mb-6">
                 <Zap size={24} />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Zero Latency
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Experience instant response times with our proprietary ultra-low latency technology
               </p>
             </div>
 
-            <div className="bg-white p-8 rounded-2xl hover:shadow-lg transition-shadow">
-              <div className="w-12 h-12 bg-gray-900 text-white rounded-xl flex items-center justify-center mb-6">
+            <div className="bg-white dark:bg-gray-900 p-8 rounded-2xl hover:shadow-lg transition-shadow">
+              <div className="w-12 h-12 bg-gray-900 dark:bg-white text-white dark:text-gray-900 rounded-xl flex items-center justify-center mb-6">
                 <Shield size={24} />
               </div>
-              <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+              <h3 className="text-2xl font-semibold text-gray-900 dark:text-white mb-4">
                 Durable Design
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                 Premium materials and rigorous testing ensure reliability through millions of gaming hours
               </p>
             </div>
@@ -217,16 +217,16 @@ export default function Home() {
       </section>
 
       <section className="py-20 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto bg-gray-900 rounded-3xl p-12 text-center">
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
+        <div className="max-w-4xl mx-auto bg-gray-900 dark:bg-white rounded-3xl p-12 text-center">
+          <h2 className="text-4xl sm:text-5xl font-bold text-white dark:text-gray-900 mb-6">
             Ready to Level Up?
           </h2>
-          <p className="text-xl text-gray-300 mb-8">
+          <p className="text-xl text-gray-300 dark:text-gray-600 mb-8">
             Join thousands of gamers who trust GameForge for their competitive edge
           </p>
           <a
             href="/shop"
-            className="inline-flex items-center gap-2 bg-white text-gray-900 px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 transition-all hover:scale-105"
+            className="inline-flex items-center gap-2 bg-white dark:bg-gray-900 text-gray-900 dark:text-white px-10 py-4 rounded-full text-lg font-semibold hover:bg-gray-100 dark:hover:bg-gray-800 transition-all hover:scale-105"
           >
             Start Shopping
             <ArrowRight size={20} />
@@ -234,7 +234,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer className="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
+      <footer className="bg-gray-900 dark:bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
             <div>
