@@ -54,7 +54,7 @@ export const productsData: Product[] = [
     id: '8',
     name: 'Mechanical Numpad',
     price: 59.99,
-    image: 'https://images.pexels.com/photos/163141/circuit-board-traces-blue-electronics-163141.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.pexels.com/photos/4551315/pexels-photo-4551315.jpeg?auto=compress&cs=tinysrgb&w=800',
     description: 'Programmable mechanical numpad with hot-swappable switches'
   },
   {
