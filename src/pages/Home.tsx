@@ -1,4 +1,4 @@
-import { Gamepad2, Cpu, Zap, Shield, Star, Users, Award, ArrowRight } from 'lucide-react';
+import { Cpu, Zap, Shield, Star, Users, Award, ArrowRight } from 'lucide-react';
 
 export default function Home() {
   const featuredProducts = [
@@ -275,7 +275,7 @@ export default function Home() {
             </div>
           </div>
           <div className="border-t border-gray-800 pt-8 text-center">
-            <p className="text-gray-400 text-sm">© 2025 GameForge. All rights reserved.</p>
+            <p className="text-gray-400 text-sm">© 2025 GameForge. All rights reserved. Made with ❤️ in Bangladesh</p>
           </div>
         </div>
       </footer>
