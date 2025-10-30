@@ -1,26 +1,31 @@
 import { Cpu, Zap, Shield, Star, Users, Award, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Home() {
   const featuredProducts = [
     {
+      id: '1',
       name: 'Quantum Controller',
       price: '$149.99',
       image: 'https://images.pexels.com/photos/3945683/pexels-photo-3945683.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'Next-gen wireless controller with haptic feedback'
     },
     {
+      id: '2',
       name: 'VR Headset Pro',
       price: '$599.99',
       image: 'https://images.pexels.com/photos/7241389/pexels-photo-7241389.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: '4K resolution VR experience with 120Hz refresh rate'
     },
     {
+      id: '3',
       name: 'Gaming Keyboard Elite',
       price: '$199.99',
       image: 'https://images.pexels.com/photos/1194713/pexels-photo-1194713.jpeg?auto=compress&cs=tinysrgb&w=800',
       description: 'Mechanical switches with customizable RGB lighting'
     },
     {
+      id: '4',
       name: 'Pro Gaming Mouse',
       price: '$89.99',
       image: 'https://images.pexels.com/photos/2115257/pexels-photo-2115257.jpeg?auto=compress&cs=tinysrgb&w=800',
@@ -115,9 +120,11 @@ export default function Home() {
                   </p>
                   <div className="flex items-center justify-between">
                     <span className="text-2xl font-bold text-gray-900 dark:text-white">{product.price}</span>
-                    <button className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
-                      <ArrowRight size={20} />
-                    </button>
+                    <Link to={`/product/${product.id}`} className="relative overflow-hidden aspect-square block">
+                      <button className="text-gray-900 dark:text-white hover:text-gray-600 dark:hover:text-gray-300 transition-colors">
+                        <ArrowRight size={20} />
+                      </button>
+                    </Link>
                   </div>
                 </div>
               </div>

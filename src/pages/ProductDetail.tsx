@@ -2,7 +2,7 @@ import { useParams, useNavigate, Link } from 'react-router-dom';
 import { Star, ShoppingCart, Truck, Shield, RotateCcw, Check } from 'lucide-react';
 import { useCart } from '../context/CartContext';
 import { getProductById, getRelatedProducts } from '../data/products';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 export default function ProductDetail() {
   const { id } = useParams<{ id: string }>();
@@ -13,6 +13,11 @@ export default function ProductDetail() {
 
   const product = id ? getProductById(id) : undefined;
   const relatedProducts = id ? getRelatedProducts(id) : [];
+
+  // Scroll to top when component mounts or product ID changes
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
 
   if (!product) {
     return (
